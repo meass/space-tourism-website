@@ -1,13 +1,17 @@
 'use client';
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { barlow } from '../fonts';
 import { technology } from '@/app/data.json';
-import { StateContext } from '../ContextProvider';
 import styles from '@/app/styles/technology.module.css';
 
 export default function Technology() {
-  const { sharedState } = useContext(StateContext);
+  const [activeState, setActiveState] = useState(0);
+
+  const handleActiveState = (item: number) => {
+    setActiveState(item);
+  };
+
   return (
     <main className={styles['technology-container']}>
       <div className={styles['grid-container']}>
@@ -17,12 +21,12 @@ export default function Technology() {
         <div className={styles['img-container']}>
           <img
             className="hidden lg:block w-full"
-            src={technology[sharedState].images.portrait}
+            src={technology[activeState].images.portrait}
             alt="launch-vehicle-portrait"
           />
           <img
             className="block lg:hidden w-full"
-            src={technology[sharedState].images.landscape}
+            src={technology[activeState].images.landscape}
             alt="launch-vehicle-portrait"
           />
         </div>
@@ -30,12 +34,13 @@ export default function Technology() {
           <ul>
             {Array.from([1, 2, 3]).map((item, index) => (
               <li
+                onClick={() => handleActiveState(index)}
                 key={item}
                 className={`${
-                  sharedState === index
+                  activeState === index
                     ? 'bg-white text-black'
                     : 'bg-transparent text-white border border-[#383b4b]'
-                }`}
+                } cursor-pointer`}
               >
                 {item}
               </li>
@@ -43,9 +48,9 @@ export default function Technology() {
           </ul>
           <div className={styles.content}>
             <p className={barlow.className}>THE TERMINOLOGY…</p>
-            <h2>{technology[sharedState].name}</h2>
+            <h2>{technology[activeState].name}</h2>
             <p className={barlow.className}>
-              {technology[sharedState].description}
+              {technology[activeState].description}
             </p>
           </div>
         </div>

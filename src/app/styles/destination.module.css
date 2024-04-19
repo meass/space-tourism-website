@@ -9,7 +9,7 @@
   @apply text-base py-8 md:pl-10 md:text-xl lg:text-3xl lg:col-start-1 lg:col-end-3 lg:inline-flex md:text-start text-center uppercase tracking-widest;
 }
 .img-container {
-  @apply max-w-44 md:max-w-[300px] lg:max-w-[445px] py-4 w-full mx-auto;
+  @apply max-w-44 md:max-w-[300px] lg:max-w-[445px] py-4 w-full mx-auto animate-fade-left animate-once;
 }
 .list-container {
   @apply max-w-[285px] md:max-w-[573px] lg:max-w-[445px] mx-auto;
