@@ -11,7 +11,7 @@ export default function NavBar() {
   const router = useRouter();
   const [activeMenu, setActiveMenu] = useState('');
 
-  const handleNavigation = (path) => {
+  const handleNavigation = (path: string) => {
     setActiveMenu(path);
     router.push(path);
   };

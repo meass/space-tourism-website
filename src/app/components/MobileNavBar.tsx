@@ -14,7 +14,7 @@ export default function MobileNavBar() {
     setActiveMenu(pathname);
   }, []);
 
-  const handleNavigation = (path) => {
+  const handleNavigation = (path: string) => {
     router.push(path);
     setToggle(false);
     setActiveMenu(path);

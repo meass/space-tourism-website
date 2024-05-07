@@ -1,12 +1,14 @@
 'use client';
 
-import { useContext, useState } from 'react';
+import { useState, useRef } from 'react';
 import { barlow } from '../fonts';
 import { technology } from '@/app/data.json';
 import styles from '@/app/styles/technology.module.css';
 
 export default function Technology() {
   const [activeState, setActiveState] = useState(0);
+  const [inProp, setInProp] = useState(false);
+  const nodeRef = useRef(null);
 
   const handleActiveState = (item: number) => {
     setActiveState(item);

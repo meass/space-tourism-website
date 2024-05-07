@@ -1,5 +1,5 @@
 'use client';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { barlow, barlowCondensed } from '../fonts';
 import { crews } from '@/app/data.json';
 import styles from '@/app/styles/crew.module.css';

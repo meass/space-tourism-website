@@ -1,7 +1,8 @@
 .home-container {
   @apply w-full h-screen bg-cover bg-no-repeat flex lg:items-end
-  justify-center items-center text-white bg-home-mobile md:bg-home-tablet lg:bg-home-desktop;
+  justify-center items-center text-white;
 }
+/* bg-home-mobile md:bg-home-tablet lg:bg-home-desktop */
 .grid-container {
   @apply max-w-[327px] w-full md:max-w-[450px] lg:max-w-6xl text-center lg:text-start lg:grid lg:grid-cols-2;
 }

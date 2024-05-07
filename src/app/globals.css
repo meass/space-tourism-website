@@ -21,6 +21,9 @@
     text-wrap: balance;
   }
 }
+body {
+  @apply bg-home-mobile md:bg-home-tablet lg:bg-home-desktop;
+}
 nav hr {
   @apply max-w-[473px] w-full justify-self-center;
 }
