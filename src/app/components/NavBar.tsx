@@ -1,5 +1,5 @@
 'use client';
-import { menus } from '@/app/data.json';
+import data from '@/app/data.json';
 import { barlow } from '../fonts';
 import { useState, useEffect, useContext } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
@@ -10,6 +10,7 @@ export default function NavBar() {
   const pathname = usePathname();
   const router = useRouter();
   const [activeMenu, setActiveMenu] = useState('');
+  const { menus } = data;
 
   const handleNavigation = (path: string) => {
     setActiveMenu(path);

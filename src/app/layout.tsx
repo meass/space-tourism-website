@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { belleFair, barlow } from './fonts';
+import { belleFair } from './fonts';
 import { StateProvider } from './ContextProvider';
 import NavBar from '@/app/components/NavBar';
 import MobileNavBar from '@/app/components/MobileNavBar';
